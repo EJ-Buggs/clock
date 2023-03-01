@@ -1,12 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, white, rgb(33, 33, 173), black);
 }
 
 .clock {
-  background-color: aliceblue;
-  width: 500px;
+  background-color: rgba(122, 122, 122, 0.7);
+  border: 2px solid;
   height: 500px;
+  width: 500px;
   border-radius: 50%;
   display: flex;
   justify-content: flex-start;
@@ -35,7 +44,6 @@ body {
 }
 
 .hour {
-  transform: rotate(45deg);
   width: 50%;
   height: 2%;
   background-color: black;
