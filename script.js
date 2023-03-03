@@ -9,7 +9,6 @@ function time() {
   hour.style.transform = `rotate(${h}deg)`;
   minute.style.transform = `rotate(${m}deg)`;
   second.style.transform = `rotate(${s}deg)`;
-  console.log(h);
 }
 
 setInterval(time, 1000);
