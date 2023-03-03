@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -47,4 +45,11 @@ body {
   width: 50%;
   height: 2%;
   background-color: black;
+}
+
+.clock span {
+  position: absolute;
+  inset: 20px;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
 }
