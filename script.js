@@ -3,12 +3,12 @@ const minute = document.querySelector(".minute");
 const hour = document.querySelector(".hour");
 
 function time() {
-  const h = new Date().getHours();
-  const m = new Date().getMinutes();
-  const s = new Date().getSeconds();
-  hour.style.transform = `rotate(${h * 30 + 90}deg)`;
-  minute.style.transform = `rotate(${m * 6 + 90}deg)`;
-  second.style.transform = `rotate(${s * 6 + 90}deg)`;
+  const h = new Date().getHours() * 30 + 90;
+  const m = new Date().getMinutes() * 6 + 90;
+  const s = new Date().getSeconds() * 6 + 90;
+  hour.style.transform = `rotate(${h}deg)`;
+  minute.style.transform = `rotate(${m}deg)`;
+  second.style.transform = `rotate(${s}deg)`;
   console.log(h);
 }
 
