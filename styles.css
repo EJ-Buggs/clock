@@ -1,50 +1,92 @@
 * {
   box-sizing: border-box;
+  font-family: "Tilt Prism", cursive;
 }
 
 body {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to left, white, rgb(33, 33, 173), black);
+  background: linear-gradient(to top left, gray, black);
+}
+
+.clock::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: black;
+  z-index: 10;
 }
 
 .clock {
-  background-color: rgba(122, 122, 122, 0.7);
+  background: linear-gradient(to top left, gray, black);
+  box-shadow: -20px -10px 10px black, inset 5px 5px 20px black,
+    inset -5px -5px 5px rgb(62, 58, 58);
   border: 2px solid;
   height: 500px;
   width: 500px;
   border-radius: 50%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.hand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.circle {
   position: absolute;
-  transform-origin: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 50%;
+  width: 380px;
+  height: 380px;
+  border: 2px solid black;
+  z-index: 10px;
 }
 
-.second {
-  width: 50%;
-  height: 0.5%;
-  background-color: red;
+.circle i {
+  position: absolute;
+  width: 8px;
+  height: 50%;
+  opacity: 0.75;
+  background-color: var(--clr);
+  transform-origin: bottom;
+  transform: scaleY(0.5);
 }
 
-.minute {
-  width: 50%;
-  height: 1%;
-  background-color: black;
+.circle:nth-child(1) i {
+  width: 4px;
+  background-color: var(--clr);
 }
 
-.hour {
-  width: 50%;
-  height: 2%;
-  background-color: black;
+.circle:nth-child(2) i {
+  width: 8px;
+  background-color: var(--clr);
+}
+
+.circle::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  background-color: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px var(--clr);
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  z-index: 7;
+}
+
+.circle3 {
+  width: 220px;
+  height: 220px;
+  z-index: 8;
 }
 
 .clock span {
@@ -52,4 +94,12 @@ body {
   inset: 20px;
   text-align: center;
   transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock strong {
+  position: absolute;
+  transform: rotate(calc(-30deg * var(--i)));
+  color: aliceblue;
+  opacity: 50%;
+  font-size: x-large;
 }

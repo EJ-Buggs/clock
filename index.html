@@ -6,22 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clock</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
     <script src="/script.js" defer></script>
   </head>
   <body>
     <div class="clock">
-      <span style="--i: 1">1</span>
-      <span style="--i: 2">2</span>
-      <span style="--i: 3">3</span>
-      <span style="--i: 4">4</span>
-      <span style="--i: 5">5</span>
-      <span style="--i: 6">6</span>
-      <span style="--i: 7">7</span>
-      <span style="--i: 8">8</span>
-      <span style="--i: 9">9</span>
-      <span style="--i: 10">10</span>
-      <span style="--i: 11">11</span>
-      <span style="--i: 12">12</span>
+      <div class="circle" id="hh" style="--clr: blue"><i></i></div>
+      <div class="circle circle2" id="mm" style="--clr: purple"><i></i></div>
+      <div class="circle circle3" id="ss" style="--clr: red"><i></i></div>
+      <span style="--i: 1"><strong>1</strong></span>
+      <span style="--i: 2"><strong>2</strong></span>
+      <span style="--i: 3"><strong>3</strong></span>
+      <span style="--i: 4"><strong>4</strong></span>
+      <span style="--i: 5"><strong>5</strong></span>
+      <span style="--i: 6"><strong>6</strong></span>
+      <span style="--i: 7"><strong>7</strong></span>
+      <span style="--i: 8"><strong>8</strong></span>
+      <span style="--i: 9"><strong>9</strong></span>
+      <span style="--i: 10"><strong>10</strong></span>
+      <span style="--i: 11"><strong>11</strong></span>
+      <span style="--i: 12"><strong>12</strong></span>
       <div class="hand hour"></div>
       <div class="hand minute"></div>
       <div class="hand second"></div>
